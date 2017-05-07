@@ -33,16 +33,6 @@
 /*global require:false */
 /*global jQuery:false */
 /*global moment:false */
-
-/*
-
-
-     Creative Tim Modifications
-
-     Line: 298 - we added class btn-primary for custom styling button.
-
-
-*/
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -295,7 +285,7 @@
                 if (!use24Hours) {
                     topRow.append($('<td>').addClass('separator'));
                     middleRow.append($('<td>')
-                        .append($('<button>').addClass('btn btn-primary btn-round').attr({'data-action': 'togglePeriod', tabindex: '-1', 'title': options.tooltips.togglePeriod})));
+                        .append($('<button>').addClass('btn btn-info btn-round').attr({'data-action': 'togglePeriod', tabindex: '-1', 'title': options.tooltips.togglePeriod})));
                     bottomRow.append($('<td>').addClass('separator'));
                 }
 
@@ -479,8 +469,8 @@
                 if (parent.length === 0) {
                     throw new Error('datetimepicker component should be placed within a relative positioned container');
                 }
-
-
+                
+                
 
                 widget.css({
                     top: vertical === 'top' ? 'auto' : position.top + element.outerHeight(),
@@ -488,12 +478,12 @@
                     left: horizontal === 'left' ? (parent === element ? 0 : position.left) : 'auto',
                     right: horizontal === 'left' ? 'auto' : parent.outerWidth() - element.outerWidth() - (parent === element ? 0 : position.left)
                 });
-
-                // Creative Tim Changes - we add after 180 ms the ".open" class, in this way the animations will be the same with the other dropdowns from the
+                
+                // Creative Tim Changes - we add after 180 ms the ".open" class, in this way the animations will be the same with the other dropdowns from the 
                 setTimeout(function(){
-                    widget.addClass('open');
+                    widget.addClass('open');    
                 }, 180);
-
+                                
             },
 
             notifyEvent = function (e) {
@@ -759,10 +749,10 @@
                     if (currentDate.day() === 0 || currentDate.day() === 6) {
                         clsName += ' weekend';
                     }
-
-
+                    
+                    
                     // Creative Tim - we added a div inside each td for design purposes
-
+                    
                     row.append('<td data-action="selectDay" data-day="' + currentDate.format('L') + '" class="day' + clsName + '"><div>' + currentDate.date() + '</div></td>');
                     currentDate.add(1, 'd');
                 }
@@ -790,9 +780,9 @@
                         row = $('<tr>');
                         html.push(row);
                     }
-
+                    
                     // Creative Tim - we added a div inside each class minute for design purposes
-
+                    
                     row.append('<td data-action="selectHour" class="hour' + (!isValid(currentHour, 'h') ? ' disabled' : '') + '"><div>' + currentHour.format(use24Hours ? 'HH' : 'hh') + '</div></td>');
                     currentHour.add(1, 'h');
                 }
@@ -811,10 +801,10 @@
                         row = $('<tr>');
                         html.push(row);
                     }
-
-
+                    
+                    
                     // Creative Tim - we added a div inside each class minute for design purposes
-
+                    
                     row.append('<td data-action="selectMinute" class="minute' + (!isValid(currentMinute, 'm') ? ' disabled' : '') + '"><div>' + currentMinute.format('mm') + '</div></td>');
                     currentMinute.add(step, 'm');
                 }
@@ -832,9 +822,9 @@
                         row = $('<tr>');
                         html.push(row);
                     }
-
+                    
                     // Creative Tim - we added a div inside each class minute for design purposes
-
+                    
                     row.append('<td data-action="selectSecond" class="second' + (!isValid(currentSecond, 's') ? ' disabled' : '') + '"><div>' + currentSecond.format('ss') + '</div></td>');
                     currentSecond.add(5, 's');
                 }
@@ -941,31 +931,31 @@
                 if (component && component.hasClass('btn')) {
                     component.toggleClass('active');
                 }
-
-
+                
+                
                 $(window).off('resize', place);
                 widget.off('click', '[data-action]');
                 widget.off('mousedown', false);
 
                 // Creative Tim Changes - we remove the ".open" class, then, fter 400 ms call the .hide() method, in this way the animations will be the same with the other dropdowns from the dashboard
-
+                
                 widget.removeClass('open');
-
+                
                 setTimeout(function(){
                     widget.hide();
-
+                     
                     widget.remove();
                     widget = false;
-
+                
                     notifyEvent({
                         type: 'dp.hide',
                         date: date.clone()
                     });
-
+    
                     input.blur();
-
+    
                     return picker;
-
+                    
                 }, 400);
 
             },
@@ -1257,7 +1247,7 @@
                     component.toggleClass('active');
                 }
                 widget.show();
-
+                
                 place();
 
 

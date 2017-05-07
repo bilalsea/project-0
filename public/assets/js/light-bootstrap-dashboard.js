@@ -1,11 +1,11 @@
 /*! =========================================================
  *
- * Material Dashboard PRO - V1.1.0
+ * Light Bootstrap Dashboard PRO - V1.3.0
  *
  * =========================================================
  *
- * Copyright 2016 Creative Tim (http://www.creative-tim.com/product/material-dashboard-pro)
- *
+ * Copyright 2016 Creative Tim
+ * Available with purchase of license from http://www.creative-tim.com/product/light-bootstrap-dashboard-pro
  *
  *                       _oo0oo_
  *                      o8888888o
@@ -13,10 +13,10 @@
  *                      (| -_- |)
  *                      0\  =  /0
  *                    ___/`---'\___
- *                  .' \|     |// '.
- *                 / \|||  :  |||// \
+ *                  .' \\|     |// '.
+ *                 / \\|||  :  |||// \
  *                / _||||| -:- |||||- \
- *               |   | \\  -  /// |   |
+ *               |   | \\\  -  /// |   |
  *               | \_|  ''\---/''  |_/ |
  *               \  .-\__  '-'  ___/-. /
  *             ___'. .'  /--.--\  `. .'___
@@ -32,21 +32,6 @@
  *
  * ========================================================= */
 
- (function(){
-     isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
-
-     if (isWindows && !$('body').hasClass('sidebar-mini')){
-        // if we are on windows OS we activate the perfectScrollbar function
-        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
-
-        $('html').addClass('perfect-scrollbar-on');
-    } else {
-        $('html').addClass('perfect-scrollbar-off');
-    }
- })();
-
-var breakCards = true;
-
 var searchVisible = 0;
 var transparent = true;
 
@@ -56,51 +41,38 @@ var fixedTop = false;
 var mobile_menu_visible = 0,
     mobile_menu_initialized = false,
     toggle_initialized = false,
-    bootstrap_nav_initialized = false;
+    bootstrap_nav_initialized = false,
+    $sidebar,
+    isWindows;
 
-var seq = 0, delays = 80, durations = 500;
-var seq2 = 0, delays2 = 80, durations2 = 500;
+(function(){
+    isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
+    if (isWindows && !$('body').hasClass('sidebar-mini')){
+       // if we are on windows OS we activate the perfectScrollbar function
+       $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+       $('html').addClass('perfect-scrollbar-on');
+   } else {
+       $('html').addClass('perfect-scrollbar-off');
+   }
+})();
 
 $(document).ready(function(){
 
+    window_width = $(window).width();
     $sidebar = $('.sidebar');
 
-    $.material.init();
-
-    // We put modals out of wrapper to working properly
-    $('.modal').appendTo("body");
-
-    md.initSidebarsCheck();
+    // check if there is an image set for the sidebar's background
+    lbd.checkSidebarImage();
 
     if($('body').hasClass('sidebar-mini')){
-        md.misc.sidebar_mini_active = true;
+        lbd.misc.sidebar_mini_active = true;
     }
 
-    window_width = $(window).width();
+    lbd.initSidebarsCheck();
 
-    // check if there is an image set for the sidebar's background
-    md.checkSidebarImage();
-
-    md.initMinimizeSidebar();
-
-    //    Activate bootstrap-select
-    if($(".selectpicker").length != 0){
-        $(".selectpicker").selectpicker();
-    }
-
-    //  Activate the tooltips
-    $('[rel="tooltip"]').tooltip();
-
-    //removed class label and label-color from tag span and replaced with data-color
-    var tagClass = $('.tagsinput').data('color');
-
-    $('.tagsinput').tagsinput({
-        tagClass: ' tag-'+ tagClass +' '
-    });
-
-    //    Activate bootstrap-select
-    $(".select").dropdown({ "dropdownClass": "dropdown-menu", "optionClass": "" });
+    lbd.initMinimizeSidebar();
 
     $('.form-control').on("focus", function(){
         $(this).parent('.input-group').addClass("input-group-focus");
@@ -108,55 +80,37 @@ $(document).ready(function(){
         $(this).parent(".input-group").removeClass("input-group-focus");
     });
 
+    // Init Collapse Areas
+    lbd.initCollapseArea();
 
-    if(breakCards == true){
-        // We break the cards headers if there is too much stress on them :-)
-        $('[data-header-animation="true"]').each(function(){
-            var $fix_button = $(this)
-            var $card = $(this).parent('.card');
+    // Init Tooltips
+    $('[rel="tooltip"]').tooltip();
 
-            $card.find('.fix-broken-card').click(function(){
-                console.log(this);
-                var $header = $(this).parent().parent().siblings('.card-header, .card-image');
-
-                $header.removeClass('hinge').addClass('fadeInDown');
-
-                $card.attr('data-count',0);
-
-                setTimeout(function(){
-                    $header.removeClass('fadeInDown animate');
-                },480);
-            });
-
-            $card.mouseenter(function(){
-                var $this = $(this);
-                hover_count = parseInt($this.attr('data-count'), 10) + 1 || 0;
-                $this.attr("data-count", hover_count);
-
-                if (hover_count >= 20){
-                    $(this).children('.card-header, .card-image').addClass('hinge animated');
-                }
-            });
-        });
+    // Init Tags Input
+    if($(".tagsinput").length != 0){
+        $(".tagsinput").tagsInput();
     }
 
+    //  Init Bootstrap Select Picker
+    if($(".selectpicker").length != 0){
+        $(".selectpicker").selectpicker();
+    }
 
 });
 
-// activate collapse right menu when the windows is resized
+// activate mobile menus when the windows is resized
 $(window).resize(function(){
-    md.initSidebarsCheck();
-
-    // reset the seq for charts drawing animations
-    seq = seq2 = 0;
-
+    lbd.initSidebarsCheck();
 });
 
-md = {
+
+lbd = {
+
     misc:{
         navbar_menu_visible: 0,
         active_collapse: true,
         disabled_collapse_init: 0,
+
     },
 
     checkSidebarImage: function(){
@@ -164,64 +118,51 @@ md = {
         image_src = $sidebar.data('image');
 
         if(image_src !== undefined){
-            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>';
+            sidebar_container = '<div class="sidebar-background" style="background-image: url(' + image_src + ') "/>'
             $sidebar.append(sidebar_container);
+        } else if(mobile_menu_initialized == true){
+            // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
+            $sidebar_wrapper.find('.navbar-form').remove();
+            $sidebar_wrapper.find('.nav-mobile-menu').remove();
+
+            mobile_menu_initialized = false;
         }
-    },
-
-    initSliders: function(){
-        // Sliders for demo purpose
-        $('#sliderRegular').noUiSlider({
-            start: 40,
-            connect: "lower",
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
-
-        $('#sliderDouble').noUiSlider({
-            start: [20, 60] ,
-            connect: true,
-            range: {
-                min: 0,
-                max: 100
-            }
-        });
     },
 
     initSidebarsCheck: function(){
         if($(window).width() <= 991){
             if($sidebar.length != 0){
-                md.initRightMenu();
+                lbd.initSidebarMenu();
 
             } else {
-                md.initBootstrapNavbarMenu();
+                lbd.initBootstrapNavbarMenu();
             }
         }
 
     },
 
-    initMinimizeSidebar:function(){
+    initMinimizeSidebar: function(){
 
         // when we are on a Desktop Screen and the collapse is triggered we check if the sidebar mini is active or not. If it is active then we don't let the collapse to show the elements because the elements from the collapse are showing on the hover state over the icons in sidebar mini, not on the click.
         $('.sidebar .collapse').on('show.bs.collapse',function(){
-            if($(window).width() > 991 && md.misc.sidebar_mini_active == true){
-                return false;
-            } else{
-                return true;
+            if($(window).width() > 991){
+                if(lbd.misc.sidebar_mini_active == true){
+                    return false;
+                } else{
+                    return true;
+                }
             }
         });
 
         $('#minimizeSidebar').click(function(){
             var $btn = $(this);
 
-            if(md.misc.sidebar_mini_active == true){
+            if(lbd.misc.sidebar_mini_active == true){
                 $('body').removeClass('sidebar-mini');
-                md.misc.sidebar_mini_active = false;
+                lbd.misc.sidebar_mini_active = false;
 
                 if(isWindows){
-                    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+                    $('.sidebar .sidebar-wrapper').perfectScrollbar();
                 }
 
             }else{
@@ -231,14 +172,14 @@ md = {
                 });
 
                 if(isWindows){
-                    $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+                    $('.sidebar .sidebar-wrapper').perfectScrollbar('destroy');
                 }
 
                 setTimeout(function(){
                     $('body').addClass('sidebar-mini');
 
                     $('.sidebar .collapse').css('height','auto');
-                    md.misc.sidebar_mini_active = true;
+                    lbd.misc.sidebar_mini_active = true;
                 },300);
             }
 
@@ -254,34 +195,38 @@ md = {
         });
     },
 
-    checkScrollForTransparentNavbar: debounce(function() {
-            if($(document).scrollTop() > 260 ) {
-                if(transparent) {
-                    transparent = false;
-                    $('.navbar-color-on-scroll').removeClass('navbar-transparent');
-                }
-            } else {
-                if( !transparent ) {
-                    transparent = true;
-                    $('.navbar-color-on-scroll').addClass('navbar-transparent');
-                }
-            }
-    }, 17),
 
+    checkFullPageBackgroundImage: function(){
+        $page = $('.full-page');
+        image_src = $page.data('image');
 
-    initRightMenu: debounce(function(){
+        if(image_src !== undefined){
+            image_container = '<div class="full-page-background" style="background-image: url(' + image_src + ') "/>'
+            $page.append(image_container);
+        }
+    },
+
+    initSidebarMenu: debounce(function(){
         $sidebar_wrapper = $('.sidebar-wrapper');
 
+        //console.log('aici se face meniu in dreapta');
+
         if(!mobile_menu_initialized){
+
             $navbar = $('nav').find('.navbar-collapse').first().clone(true);
 
             nav_content = '';
             mobile_menu_content = '';
 
+            //add the content from the regular header to the mobile menu
+            //pas = 1;
             $navbar.children('ul').each(function(){
 
                 content_buff = $(this).html();
                 nav_content = nav_content + content_buff;
+                //console.log('pas:' + pas);
+
+                //pas = pas+1;
             });
 
             nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
@@ -300,15 +245,19 @@ md = {
 
             });
 
-            // simulate resize so all the charts/maps will be redrawn
-            window.dispatchEvent(new Event('resize'));
-
             mobile_menu_initialized = true;
         } else {
+            console.log('window with:' + $(window).width());
             if($(window).width() > 991){
                 // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
                 $sidebar_wrapper.find('.navbar-form').remove();
                 $sidebar_wrapper.find('.nav-mobile-menu').remove();
+
+                console.log(lbd.misc.sidebar_mini_active);
+
+                // if(lbd.misc.sidebar_mini_active == true){
+                //     $('body').addClass('sidebar-mini');
+                // }
 
                 mobile_menu_initialized = false;
             }
@@ -364,7 +313,7 @@ md = {
 
             toggle_initialized = true;
         }
-    }, 200),
+    }, 500),
 
 
     initBootstrapNavbarMenu: debounce(function(){
@@ -384,7 +333,7 @@ md = {
             nav_content = '<ul class="nav nav-mobile-menu">' + nav_content + '</ul>';
 
             $navbar.html(nav_content);
-            $navbar.addClass('off-canvas-sidebar');
+            $navbar.addClass('bootstrap-navbar');
 
             // append it to the body, so it will come from the right side of the screen
             $('body').append($navbar);
@@ -441,53 +390,49 @@ md = {
         }
     }, 500),
 
-    startAnimationForLineChart: function(chart){
+    initCollapseArea: function(){
+        $('[data-toggle="collapse-hover"]').each(function () {
+            var thisdiv = $(this).attr("data-target");
+            $(thisdiv).addClass("collapse-hover");
+        });
 
-        chart.on('draw', function(data) {
-          if(data.type === 'line' || data.type === 'area') {
-            data.element.animate({
-              d: {
-                begin: 600,
-                dur: 700,
-                from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
-                to: data.path.clone().stringify(),
-                easing: Chartist.Svg.Easing.easeOutQuint
-              }
-            });
-          } else if(data.type === 'point') {
-                seq++;
-                data.element.animate({
-                  opacity: {
-                    begin: seq * delays,
-                    dur: durations,
-                    from: 0,
-                    to: 1,
-                    easing: 'ease'
-                  }
+        $('[data-toggle="collapse-hover"]').hover(function(){
+            var thisdiv = $(this).attr("data-target");
+            if(!$(this).hasClass('state-open')){
+                $(this).addClass('state-hover');
+                $(thisdiv).css({
+                    'height':'30px'
                 });
             }
-        });
 
-        seq = 0;
-    },
-    startAnimationForBarChart: function(chart){
+        },
+        function(){
+            var thisdiv = $(this).attr("data-target");
+            $(this).removeClass('state-hover');
 
-        chart.on('draw', function(data) {
-          if(data.type === 'bar'){
-              seq2++;
-              data.element.animate({
-                opacity: {
-                  begin: seq2 * delays2,
-                  dur: durations2,
-                  from: 0,
-                  to: 1,
-                  easing: 'ease'
+            if(!$(this).hasClass('state-open')){
+                $(thisdiv).css({
+                    'height':'0px'
+                });
+            }
+        }).click(function(event){
+                event.preventDefault();
+
+                var thisdiv = $(this).attr("data-target");
+                var height = $(thisdiv).children('.panel-body').height();
+
+                if($(this).hasClass('state-open')){
+                    $(thisdiv).css({
+                        'height':'0px',
+                    });
+                    $(this).removeClass('state-open');
+                } else {
+                    $(thisdiv).css({
+                        'height':height + 30,
+                    });
+                    $(this).addClass('state-open');
                 }
-              });
-          }
-        });
-
-        seq2 = 0;
+            });
     }
 }
 
@@ -509,12 +454,3 @@ function debounce(func, wait, immediate) {
 		if (immediate && !timeout) func.apply(context, args);
 	};
 };
-
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-46172202-1', 'auto');
-ga('send', 'pageview');

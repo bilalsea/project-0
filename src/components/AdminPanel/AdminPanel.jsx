@@ -4,213 +4,166 @@ import './AdminPanel.css';
 export default class App extends Component {
     render() {
         return (
-            <div>
+            <div className="adminPanel">
                 <div className="wrapper">
-                    <div className="sidebar" data-active-color="purple" data-background-color="black" data-image="../assets/img/sidebar-3.jpg">
+                    <div className="sidebar" data-color="orange" data-image="../assets/img/full-screen-image-3.jpg">
                         {/*<!--
-        Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
-        Tip 2: you can also add an image using data-image tag
-        Tip 3: you can change the color of the sidebar with data-background-color="white | black"
-    -->*/}
+
+            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+            Tip 2: you can also add an image using data-image tag
+
+        -->*/}
+
                         <div className="logo">
-                            <a href="" className="simple-text">
-                                AdamJee Ro Plant
-                            </a>
+                            <a href="http://www.creative-tim.com" className="logo-text">
+                                Creative Tim
+            </a>
                         </div>
                         <div className="logo logo-mini">
-                            <a href="" className="simple-text">
-                                AJ
-                            </a>
+                            <a href="http://www.creative-tim.com" className="logo-text">
+                                Ct
+			</a>
                         </div>
+
                         <div className="sidebar-wrapper">
                             <div className="user">
                                 <div className="photo">
-                                    <img src="../assets/img/faces/marc.jpg" alt="" />
+                                    <img src="../assets/img/default-avatar.png" />
                                 </div>
                                 <div className="info">
                                     <a data-toggle="collapse" href="#collapseExample" className="collapsed">
-                                        AdamJee
-                                    <b className="caret"></b>
+                                        Tania Andrew
+                        <b className="caret"></b>
                                     </a>
                                     <div className="collapse" id="collapseExample">
                                         <ul className="nav">
-                                            <li>
-                                                <a href="#">My Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Edit Profile</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Settings</a>
-                                            </li>
+                                            <li><a href="#">My Profile</a></li>
+                                            <li><a href="#">Edit Profile</a></li>
+                                            <li><a href="#">Settings</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+
                             <ul className="nav">
                                 <li className="active">
-                                    <a href="./dashboard.html">
-                                        <i className="material-icons">dashboard</i>
+                                    <a href="dashboard.html">
+                                        <i className="fa fa-home"></i>
                                         <p>Dashboard</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a data-toggle="collapse" href="#pagesExamples">
-                                        <i className="material-icons">image</i>
-                                        <p>Pages
-                                        <b className="caret"></b>
-                                        </p>
-                                    </a>
-                                    <div className="collapse" id="pagesExamples">
-                                        <ul className="nav">
-                                            <li>
-                                                <a href="./pages/pricing.html">Pricing</a>
-                                            </li>
-                                            <li>
-                                                <a href="./pages/timeline.html">Timeline</a>
-                                            </li>
-                                            <li>
-                                                <a href="./pages/login.html">Login Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="./pages/register.html">Register Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="./pages/lock.html">Lock Screen Page</a>
-                                            </li>
-                                            <li>
-                                                <a href="./pages/user.html">User Profile</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
                                     <a data-toggle="collapse" href="#componentsExamples">
-                                        <i className="material-icons">apps</i>
+                                        <i className="fa fa-plugin"></i>
                                         <p>Components
-                                        <b className="caret"></b>
+                           <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="componentsExamples">
                                         <ul className="nav">
-                                            <li>
-                                                <a href="./components/buttons.html">Buttons</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/grid.html">Grid System</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/panels.html">Panels</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/sweet-alert.html">Sweet Alert</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/notifications.html">Notifications</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/icons.html">Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/typography.html">Typography</a>
-                                            </li>
+                                            <li><a href="components/buttons.html">Buttons</a></li>
+                                            <li><a href="components/grid.html">Grid System</a></li>
+                                            <li><a href="components/icons.html">Icons</a></li>
+                                            <li><a href="components/notifications.html">Notifications</a></li>
+                                            <li><a href="components/panels.html">Panels</a></li>
+                                            <li><a href="components/sweet-alert.html">Sweet Alert</a></li>
+                                            <li><a href="components/typography.html">Typography</a></li>
                                         </ul>
                                     </div>
                                 </li>
+
                                 <li>
                                     <a data-toggle="collapse" href="#formsExamples">
-                                        <i className="material-icons">content_paste</i>
+                                        <i className="fa fa-note2"></i>
                                         <p>Forms
-                                        <b className="caret"></b>
+                           <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="formsExamples">
                                         <ul className="nav">
-                                            <li>
-                                                <a href="./forms/regular.html">Regular Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="./forms/extended.html">Extended Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="./forms/validation.html">Validation Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="./forms/wizard.html">Wizard</a>
-                                            </li>
+                                            <li><a href="forms/regular.html">Regular Forms</a></li>
+                                            <li><a href="forms/extended.html">Extended Forms</a></li>
+                                            <li><a href="forms/validation.html">Validation Forms</a></li>
+                                            <li><a href="forms/wizard.html">Wizard</a></li>
                                         </ul>
                                     </div>
                                 </li>
+
                                 <li>
                                     <a data-toggle="collapse" href="#tablesExamples">
-                                        <i className="material-icons">grid_on</i>
+                                        <i className="fa fa-news-paper"></i>
                                         <p>Tables
-                                        <b className="caret"></b>
+                           <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="tablesExamples">
                                         <ul className="nav">
-                                            <li>
-                                                <a href="./tables/regular.html">Regular Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="./tables/extended.html">Extended Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="./tables/datatables.net.html">DataTables.net</a>
-                                            </li>
+                                            <li><a href="tables/regular.html">Regular Tables</a></li>
+                                            <li><a href="tables/extended.html">Extended Tables</a></li>
+                                            <li><a href="tables/bootstrap-table.html">Bootstrap Table</a></li>
+                                            <li><a href="tables/datatables.net.html">DataTables.net</a></li>
                                         </ul>
                                     </div>
                                 </li>
+
                                 <li>
                                     <a data-toggle="collapse" href="#mapsExamples">
-                                        <i className="material-icons">place</i>
+                                        <i className="fa fa-map-marker"></i>
                                         <p>Maps
-                                        <b className="caret"></b>
+                           <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="mapsExamples">
                                         <ul className="nav">
-                                            <li>
-                                                <a href="./maps/google.html">Google Maps</a>
-                                            </li>
-                                            <li>
-                                                <a href="./maps/fullscreen.html">Full Screen Map</a>
-                                            </li>
-                                            <li>
-                                                <a href="./maps/vector.html">Vector Map</a>
-                                            </li>
+                                            <li><a href="maps/google.html">Google Maps</a></li>
+                                            <li><a href="maps/vector.html">Vector Maps</a></li>
+                                            <li><a href="maps/fullscreen.html">Full Screen Map</a></li>
                                         </ul>
                                     </div>
                                 </li>
+
                                 <li>
-                                    <a href="">
-                                        <i className="material-icons">widgets</i>
-                                        <p>Widgets</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i className="material-icons">timeline</i>
+                                    <a href="charts.html">
+                                        <i className="fa fa-graph1"></i>
                                         <p>Charts</p>
                                     </a>
                                 </li>
+
                                 <li>
-                                    <a href="">
-                                        <i className="material-icons">date_range</i>
+                                    <a href="calendar.html">
+                                        <i className="fa fa-calendar"></i>
                                         <p>Calendar</p>
                                     </a>
+                                </li>
+
+                                <li>
+                                    <a data-toggle="collapse" href="#pagesExamples">
+                                        <i className="pe-7s-gift"></i>
+                                        <p>Pages
+                           <b className="caret"></b>
+                                        </p>
+                                    </a>
+                                    <div className="collapse" id="pagesExamples">
+                                        <ul className="nav">
+                                            <li><a href="pages/login.html">Login Page</a></li>
+                                            <li><a href="pages/register.html">Register Page</a></li>
+                                            <li><a href="pages/lock.html">Lock Screen Page</a></li>
+                                            <li><a href="pages/user.html">User Page</a></li>
+                                            <li><a href="#">More coming soon...</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
                     <div className="main-panel">
-                        <nav className="navbar navbar-transparent navbar-absolute">
+                        <nav className="navbar navbar-default">
                             <div className="container-fluid">
                                 <div className="navbar-minimize">
-                                    <button id="minimizeSidebar" className="btn btn-round btn-white btn-fill btn-just-icon">
-                                        <i className="material-icons visible-on-sidebar-regular">more_vert</i>
-                                        <i className="material-icons visible-on-sidebar-mini">view_list</i>
+                                    <button id="minimizeSidebar" className="btn btn-warning btn-fill btn-round btn-icon">
+                                        <i className="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+                                        <i className="fa fa-navicon visible-on-sidebar-mini"></i>
                                     </button>
                                 </div>
                                 <div className="navbar-header">
@@ -220,490 +173,471 @@ export default class App extends Component {
                                         <span className="icon-bar"></span>
                                         <span className="icon-bar"></span>
                                     </button>
-                                    <a className="navbar-brand" href="#"> Dashboard </a>
+                                    <a className="navbar-brand" href="#">Dashboard PRO</a>
                                 </div>
                                 <div className="collapse navbar-collapse">
+
+                                    <form className="navbar-form navbar-left navbar-search-form" role="search">
+                                        <div className="input-group">
+                                            <span className="input-group-addon"><i className="fa fa-search"></i></span>
+                                            <input type="text" value="" className="form-control" placeholder="Search..." />
+                                        </div>
+                                    </form>
+
                                     <ul className="nav navbar-nav navbar-right">
                                         <li>
-                                            <a href="#pablo" className="dropdown-toggle" data-toggle="dropdown">
-                                                <i className="material-icons">dashboard</i>
-                                                <p className="hidden-lg hidden-md">Dashboard</p>
+                                            <a href="charts.html">
+                                                <i className="fa fa-line-chart"></i>
+                                                <p>Stats</p>
                                             </a>
                                         </li>
+
                                         <li className="dropdown">
                                             <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                                <i className="material-icons">notifications</i>
-                                                <span className="notification">5</span>
-                                                <p className="hidden-lg hidden-md">
-                                                    Notifications
-                                                <b className="caret"></b>
+                                                <i className="fa fa-gavel"></i>
+                                                <p className="hidden-md hidden-lg">
+                                                    Actions
+									<b className="caret"></b>
                                                 </p>
                                             </a>
                                             <ul className="dropdown-menu">
+                                                <li><a href="#">Create New Post</a></li>
+                                                <li><a href="#">Manage Something</a></li>
+                                                <li><a href="#">Do Nothing</a></li>
+                                                <li><a href="#">Submit to live</a></li>
+                                                <li className="divider"></li>
+                                                <li><a href="#">Another Action</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li className="dropdown">
+                                            <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                                <i className="fa fa-bell-o"></i>
+                                                <span className="notification">5</span>
+                                                <p className="hidden-md hidden-lg">
+                                                    Notifications
+									<b className="caret"></b>
+                                                </p>
+                                            </a>
+                                            <ul className="dropdown-menu">
+                                                <li><a href="#">Notification 1</a></li>
+                                                <li><a href="#">Notification 2</a></li>
+                                                <li><a href="#">Notification 3</a></li>
+                                                <li><a href="#">Notification 4</a></li>
+                                                <li><a href="#">Another notification</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li className="dropdown dropdown-with-icons">
+                                            <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                                <i className="fa fa-list"></i>
+                                                <p className="hidden-md hidden-lg">
+                                                    More
+									<b className="caret"></b>
+                                                </p>
+                                            </a>
+                                            <ul className="dropdown-menu dropdown-with-icons">
                                                 <li>
-                                                    <a href="#">Mike John responded to your email</a>
+                                                    <a href="#">
+                                                        <i className="pe-7s-mail"></i> Messages
+									</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">You have 5 new tasks</a>
+                                                    <a href="#">
+                                                        <i className="pe-7s-help1"></i> Help Center
+									</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">You're now friend with Andrew</a>
+                                                    <a href="#">
+                                                        <i className="pe-7s-tools"></i> Settings
+									</a>
+                                                </li>
+                                                <li className="divider"></li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i className="pe-7s-lock"></i> Lock Screen
+									</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Another Notification</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Another One</a>
+                                                    <a href="#" className="text-danger">
+                                                        <i className="pe-7s-close-circle"></i>
+                                                        Log out
+									</a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="#pablo" className="dropdown-toggle" data-toggle="dropdown">
-                                                <i className="material-icons">person</i>
-                                                <p className="hidden-lg hidden-md">Profile</p>
-                                            </a>
-                                        </li>
-                                        <li className="separator hidden-lg hidden-md"></li>
+
                                     </ul>
-                                    <form className="navbar-form navbar-right" role="search">
-                                        <div className="form-group form-search is-empty">
-                                            <input type="text" className="form-control" placeholder="Search" />
-                                            <span className="material-input"></span>
-                                        </div>
-                                        <button type="submit" className="btn btn-white btn-round btn-just-icon">
-                                            <i className="material-icons">search</i>
-                                            <div className="ripple-container"></div>
-                                        </button>
-                                    </form>
                                 </div>
                             </div>
                         </nav>
 
                         <div className="content">
                             <div className="container-fluid">
-                                <div className="row">
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="orange">
-                                                <i className="material-icons">weekend</i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Bookings</p>
-                                                <h3 className="card-title">184</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons text-danger">warning</i>
-                                                    <a href="#pablo">Get More Space...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="rose">
-                                                <i className="material-icons">equalizer</i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Website Visits</p>
-                                                <h3 className="card-title">75.521</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">local_offer</i> Tracked from Google Analytics
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="green">
-                                                <i className="material-icons">store</i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Revenue</p>
-                                                <h3 className="card-title">$34,245</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">date_range</i> Last 24 Hours
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="blue">
-                                                <i className="fa fa-twitter"></i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Followers</p>
-                                                <h3 className="card-title">+245</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">update</i> Just Updated
-                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col-md-4">
-                                        <div className="card card-chart">
-                                            <div className="card-header" data-background-color="rose" data-header-animation="true">
-                                                <div className="ct-chart" id="websiteViewsChart"></div>
-                                            </div>
-                                            <div className="card-content">
-                                                <div className="card-actions">
-                                                    <button type="button" className="btn btn-danger btn-simple fix-broken-card">
-                                                        <i className="material-icons">build</i> Fix Header!
-                                                    </button>
-                                                    <button type="button" className="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
-                                                        <i className="material-icons">refresh</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
-                                                        <i className="material-icons">edit</i>
-                                                    </button>
-                                                </div>
-                                                <h4 className="card-title">Website Views</h4>
-                                                <p className="category">Last Campaign Performance</p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">access_time</i> campaign sent 2 days ago
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="card card-chart">
-                                            <div className="card-header" data-background-color="green" data-header-animation="true">
-                                                <div className="ct-chart" id="dailySalesChart"></div>
-                                            </div>
-                                            <div className="card-content">
-                                                <div className="card-actions">
-                                                    <button type="button" className="btn btn-danger btn-simple fix-broken-card">
-                                                        <i className="material-icons">build</i> Fix Header!
-                                                    </button>
-                                                    <button type="button" className="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
-                                                        <i className="material-icons">refresh</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
-                                                        <i className="material-icons">edit</i>
-                                                    </button>
-                                                </div>
-                                                <h4 className="card-title">Daily Sales</h4>
-                                                <p className="category">
-                                                    <span className="text-success"><i className="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">access_time</i> updated 4 minutes ago
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4">
-                                        <div className="card card-chart">
-                                            <div className="card-header" data-background-color="blue" data-header-animation="true">
-                                                <div className="ct-chart" id="completedTasksChart"></div>
-                                            </div>
-                                            <div className="card-content">
-                                                <div className="card-actions">
-                                                    <button type="button" className="btn btn-danger btn-simple fix-broken-card">
-                                                        <i className="material-icons">build</i> Fix Header!
-                                                    </button>
-                                                    <button type="button" className="btn btn-info btn-simple" rel="tooltip" data-placement="bottom" title="Refresh">
-                                                        <i className="material-icons">refresh</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="Change Date">
-                                                        <i className="material-icons">edit</i>
-                                                    </button>
-                                                </div>
-                                                <h4 className="card-title">Completed Tasks</h4>
-                                                <p className="category">Last Campaign Performance</p>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">access_time</i> campaign sent 2 days ago
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <div className="card">
-                                            <div className="card-header card-header-icon" data-background-color="green">
-                                                <i className="material-icons">language</i>
+                                        <div className="card ">
+                                            <div className="header">
+                                                <h4 className="title">Global Sales by Top Locations</h4>
+                                                <p className="category">All products that were shipped</p>
                                             </div>
-                                            <div className="card-content">
-                                                <h4 className="card-title">Global Sales by Top Locations</h4>
+                                            <div className="content">
                                                 <div className="row">
                                                     <div className="col-md-5">
-                                                        <div className="table-responsive table-sales">
+                                                        <div className="table-responsive">
                                                             <table className="table">
                                                                 <tbody>
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/US.png" alt=""/>
+                                                                                <img src="../assets/img/flags/US.png" />
                                                                             </div>
                                                                         </td>
                                                                         <td>USA</td>
                                                                         <td className="text-right">
                                                                             2.920
-                                                                        </td>
+                                                        </td>
                                                                         <td className="text-right">
                                                                             53.23%
-                                                                        </td>
+                                                        </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/DE.png" alt=""/>
+                                                                                <img src="../assets/img/flags/DE.png" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Germany</td>
                                                                         <td className="text-right">
                                                                             1.300
-                                                                        </td>
+                                                        </td>
                                                                         <td className="text-right">
                                                                             20.43%
-                                                                        </td>
+                                                        </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/AU.png" alt=""/>
+                                                                                <img src="../assets/img/flags/AU.png" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Australia</td>
                                                                         <td className="text-right">
                                                                             760
-                                                                        </td>
+                                                        </td>
                                                                         <td className="text-right">
                                                                             10.35%
-                                                                        </td>
+                                                        </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/GB.png" alt=""/>
+                                                                                <img src="../assets/img/flags/GB.png" />
                                                                             </div>
                                                                         </td>
                                                                         <td>United Kingdom</td>
                                                                         <td className="text-right">
                                                                             690
-                                                                        </td>
+                                                        </td>
                                                                         <td className="text-right">
                                                                             7.87%
-                                                                        </td>
+                                                        </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/RO.png" alt=""/>
+                                                                                <img src="../assets/img/flags/RO.png" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Romania</td>
                                                                         <td className="text-right">
                                                                             600
-                                                                        </td>
+                                                        </td>
                                                                         <td className="text-right">
                                                                             5.94%
-                                                                        </td>
+                                                        </td>
                                                                     </tr>
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/BR.png" alt="" />
+                                                                                <img src="../assets/img/flags/BR.png" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Brasil</td>
                                                                         <td className="text-right">
                                                                             550
-                                                                        </td>
+                                                        </td>
                                                                         <td className="text-right">
                                                                             4.34%
-                                                                        </td>
+                                                        </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
                                                     <div className="col-md-6 col-md-offset-1">
-                                                        <div id="worldMap" className="map"></div>
+                                                        <div id="worldMap" style={{ height: 300 }}></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                {/*<h3>Manage Listings</h3>
-                                <br />
+
+
+
                                 <div className="row">
                                     <div className="col-md-4">
-                                        <div className="card card-product">
-                                            <div className="card-image" data-header-animation="true">
-                                                <a href="#pablo">
-                                                    <img className="img" src="../assets/img/card-2.jpeg" />
-                                                </a>
+                                        <div className="card">
+                                            <div className="header">
+                                                <h4 className="title">Email Statistics</h4>
+                                                <p className="category">Last Campaign Performance</p>
                                             </div>
-                                            <div className="card-content">
-                                                <div className="card-actions">
-                                                    <button type="button" className="btn btn-danger btn-simple fix-broken-card">
-                                                        <i className="material-icons">build</i> Fix Header!
-                                                    </button>
-                                                    <button type="button" className="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
-                                                        <i className="material-icons">art_track</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
-                                                        <i className="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
-                                                        <i className="material-icons">close</i>
-                                                    </button>
-                                                </div>
-                                                <h4 className="card-title">
-                                                    <a href="#pablo">Cozy 5 Stars Apartment</a>
-                                                </h4>
-                                                <div className="card-description">
-                                                    The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
-                                                </div>
+                                            <div className="content">
+                                                <div id="chartEmail" className="ct-chart "></div>
                                             </div>
-                                            <div className="card-footer">
-                                                <div className="price">
-                                                    <h4>$899/night</h4>
-                                                </div>
-                                                <div className="stats pull-right">
-                                                    <p className="category"><i className="material-icons">place</i> Barcelona, Spain</p>
-                                                </div>
+                                            <div className="footer">
+                                                <div className="legend">
+                                                    <i className="fa fa-circle text-info"></i> Open
+                                    <i className="fa fa-circle text-danger"></i> Bounce
+                                    <i className="fa fa-circle text-warning"></i> Unsubscribe
+                                </div>
+                                                <hr />
+                                                <div className="stats">
+                                                    <i className="fa fa-clock-o"></i> Campaign sent 2 days ago
+                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div className="col-md-8">
+                                        <div className="card">
+                                            <div className="header">
+                                                <h4 className="title">Users Behavior</h4>
+                                                <p className="category">24 Hours performance</p>
+                                            </div>
+                                            <div className="content">
+                                                <div id="chartHours" className="ct-chart"></div>
+                                            </div>
+                                            <div className="footer">
+                                                <div className="legend">
+                                                    <i className="fa fa-circle text-info"></i> Open
+                                    <i className="fa fa-circle text-danger"></i> Click
+                                    <i className="fa fa-circle text-warning"></i> Click Second Time
+                                </div>
+                                                <hr />
+                                                <div className="stats">
+                                                    <i className="fa fa-history"></i> Updated 3 minutes ago
+                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-4">
-                                        <div className="card card-product">
-                                            <div className="card-image" data-header-animation="true">
-                                                <a href="#pablo">
-                                                    <img className="img" src="../assets/img/card-3.jpeg" />
-                                                </a>
+                                </div>
+
+
+
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="card ">
+                                            <div className="header">
+                                                <h4 className="title">2014 Sales</h4>
+                                                <p className="category">All products including Taxes</p>
                                             </div>
-                                            <div className="card-content">
-                                                <div className="card-actions">
-                                                    <button type="button" className="btn btn-danger btn-simple fix-broken-card">
-                                                        <i className="material-icons">build</i> Fix Header!
-                                                    </button>
-                                                    <button type="button" className="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
-                                                        <i className="material-icons">art_track</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
-                                                        <i className="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
-                                                        <i className="material-icons">close</i>
-                                                    </button>
-                                                </div>
-                                                <h4 className="card-title">
-                                                    <a href="#pablo">Office Studio</a>
-                                                </h4>
-                                                <div className="card-description">
-                                                    The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.
-                                                </div>
+                                            <div className="content">
+                                                <div id="chartActivity" className="ct-chart"></div>
                                             </div>
-                                            <div className="card-footer">
-                                                <div className="price">
-                                                    <h4>$1.119/night</h4>
-                                                </div>
-                                                <div className="stats pull-right">
-                                                    <p className="category"><i className="material-icons">place</i> London, UK</p>
-                                                </div>
+                                            <div className="footer">
+                                                <div className="legend">
+                                                    <i className="fa fa-circle text-info"></i> Tesla Model S
+                                    <i className="fa fa-circle text-danger"></i> BMW 5 Series
+                                </div>
+                                                <hr />
+                                                <div className="stats">
+                                                    <i className="fa fa-check"></i> Data information certified
+                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-md-4">
-                                        <div className="card card-product">
-                                            <div className="card-image" data-header-animation="true">
-                                                <a href="#pablo">
-                                                    <img className="img" src="../assets/img/card-1.jpeg" />
-                                                </a>
+
+                                    <div className="col-md-6">
+                                        <div className="card ">
+                                            <div className="header">
+                                                <h4 className="title">Tasks</h4>
+                                                <p className="category">Backend development</p>
                                             </div>
-                                            <div className="card-content">
-                                                <div className="card-actions">
-                                                    <button type="button" className="btn btn-danger btn-simple fix-broken-card">
-                                                        <i className="material-icons">build</i> Fix Header!
-                                                    </button>
-                                                    <button type="button" className="btn btn-default btn-simple" rel="tooltip" data-placement="bottom" title="View">
-                                                        <i className="material-icons">art_track</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-success btn-simple" rel="tooltip" data-placement="bottom" title="Edit">
-                                                        <i className="material-icons">edit</i>
-                                                    </button>
-                                                    <button type="button" className="btn btn-danger btn-simple" rel="tooltip" data-placement="bottom" title="Remove">
-                                                        <i className="material-icons">close</i>
-                                                    </button>
-                                                </div>
-                                                <h4 className="card-title">
-                                                    <a href="#pablo">Beautiful Castle</a>
-                                                </h4>
-                                                <div className="card-description">
-                                                    The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.
+                                            <div className="content">
+                                                <div className="table-full-width">
+                                                    <table className="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <label className="checkbox">
+                                                                        <input type="checkbox" value="" data-toggle="checkbox" />
+                                                                    </label>
+                                                                </td>
+                                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                                <td className="td-actions text-right">
+                                                                    <button type="button" rel="tooltip" title="Edit Task" className="btn btn-info btn-simple btn-xs">
+                                                                        <i className="fa fa-edit"></i>
+                                                                    </button>
+                                                                    <button type="button" rel="tooltip" title="Remove" className="btn btn-danger btn-simple btn-xs">
+                                                                        <i className="fa fa-times"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label className="checkbox">
+                                                                        <input type="checkbox" value="" data-toggle="checkbox" />
+                                                                    </label>
+                                                                </td>
+                                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                                <td className="td-actions text-right">
+                                                                    <button type="button" rel="tooltip" title="Edit Task" className="btn btn-info btn-simple btn-xs">
+                                                                        <i className="fa fa-edit"></i>
+                                                                    </button>
+                                                                    <button type="button" rel="tooltip" title="Remove" className="btn btn-danger btn-simple btn-xs">
+                                                                        <i className="fa fa-times"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label className="checkbox">
+                                                                        <input type="checkbox" value="" data-toggle="checkbox" />
+                                                                    </label>
+                                                                </td>
+                                                                <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+</td>
+                                                                <td className="td-actions text-right">
+                                                                    <button type="button" rel="tooltip" title="Edit Task" className="btn btn-info btn-simple btn-xs">
+                                                                        <i className="fa fa-edit"></i>
+                                                                    </button>
+                                                                    <button type="button" rel="tooltip" title="Remove" className="btn btn-danger btn-simple btn-xs">
+                                                                        <i className="fa fa-times"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label className="checkbox">
+                                                                        <input type="checkbox" value="" data-toggle="checkbox" />
+                                                                    </label>
+                                                                </td>
+                                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                                <td className="td-actions text-right">
+                                                                    <button type="button" rel="tooltip" title="Edit Task" className="btn btn-info btn-simple btn-xs">
+                                                                        <i className="fa fa-edit"></i>
+                                                                    </button>
+                                                                    <button type="button" rel="tooltip" title="Remove" className="btn btn-danger btn-simple btn-xs">
+                                                                        <i className="fa fa-times"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label className="checkbox">
+                                                                        <input type="checkbox" value="" data-toggle="checkbox" />
+                                                                    </label>
+                                                                </td>
+                                                                <td>Read "Following makes Medium better"</td>
+                                                                <td className="td-actions text-right">
+                                                                    <button type="button" rel="tooltip" title="Edit Task" className="btn btn-info btn-simple btn-xs">
+                                                                        <i className="fa fa-edit"></i>
+                                                                    </button>
+                                                                    <button type="button" rel="tooltip" title="Remove" className="btn btn-danger btn-simple btn-xs">
+                                                                        <i className="fa fa-times"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <label className="checkbox">
+                                                                        <input type="checkbox" value="" data-toggle="checkbox" />
+                                                                    </label>
+                                                                </td>
+                                                                <td>Unfollow 5 enemies from twitter</td>
+                                                                <td className="td-actions text-right">
+                                                                    <button type="button" rel="tooltip" title="Edit Task" className="btn btn-info btn-simple btn-xs">
+                                                                        <i className="fa fa-edit"></i>
+                                                                    </button>
+                                                                    <button type="button" rel="tooltip" title="Remove" className="btn btn-danger btn-simple btn-xs">
+                                                                        <i className="fa fa-times"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
-                                            <div className="card-footer">
-                                                <div className="price">
-                                                    <h4>$459/night</h4>
-                                                </div>
-                                                <div className="stats pull-right">
-                                                    <p className="category"><i className="material-icons">place</i> Milan, Italy</p>
-                                                </div>
+                                            <div className="footer">
+                                                <hr />
+                                                <div className="stats">
+                                                    <i className="fa fa-history"></i> Updated 3 minutes ago
+                                </div>
                                             </div>
+
                                         </div>
                                     </div>
-                                </div>*/}
+                                </div>
+
+
+
                             </div>
                         </div>
+
+
                         <footer className="footer">
                             <div className="container-fluid">
+                                {/*<nav className="pull-left">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Company
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Portfolio
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Blog
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>*/}
                                 <p className="copyright pull-right">
-                                    &copy;
-                                    2017
-                                    <a href="">Saylani Software House</a>, made with love for a better web
+                                    &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
                                 </p>
                             </div>
                         </footer>
+
                     </div>
                 </div>
+
                 {/*<div className="fixed-plugin">
                     <div className="dropdown show-dropdown">
                         <a href="#" data-toggle="dropdown">
                             <i className="fa fa-cog fa-2x"> </i>
                         </a>
                         <ul className="dropdown-menu">
-                            <li className="header-title"> Sidebar Filters</li>
+                            <li className="header-title">Configuration</li>
                             <li className="adjustments-line">
-                                <a href="javascript:void(0)" className="switch-trigger active-color">
-                                    <div className="badge-colors text-center">
-                                        <span className="badge filter badge-purple" data-color="purple"></span>
-                                        <span className="badge filter badge-blue" data-color="blue"></span>
-                                        <span className="badge filter badge-green" data-color="green"></span>
-                                        <span className="badge filter badge-orange" data-color="orange"></span>
-                                        <span className="badge filter badge-red" data-color="red"></span>
-                                        <span className="badge filter badge-rose active" data-color="rose"></span>
-                                    </div>
-                                    <div className="clearfix"></div>
-                                </a>
-                            </li>
-                            <li className="header-title">Sidebar Background</li>
-                            <li className="adjustments-line">
-                                <a href="javascript:void(0)" className="switch-trigger background-color">
-                                    <div className="text-center">
-                                        <span className="badge filter badge-white" data-color="white"></span>
-                                        <span className="badge filter badge-black active" data-color="black"></span>
+                                <a href="javascript:void(0)" className="switch-trigger">
+                                    <p>Sidebar Image</p>
+                                    <div className="switch switch-sidebar-image"
+                                        data-on-label="ON"
+                                        data-off-label="OFF">
+                                        <input type="checkbox"/>
                                     </div>
                                     <div className="clearfix"></div>
                                 </a>
@@ -711,59 +645,77 @@ export default class App extends Component {
                             <li className="adjustments-line">
                                 <a href="javascript:void(0)" className="switch-trigger">
                                     <p>Sidebar Mini</p>
-                                    <div className="togglebutton switch-sidebar-mini">
-                                        <label>
-                                            <input type="checkbox" unchecked="" />
-                                        </label>
+                                    <div className="switch  switch-sidebar-mini"
+                                        data-on-label="ON"
+                                        data-off-label="OFF">
+                                        <input type="checkbox" />
                                     </div>
                                     <div className="clearfix"></div>
                                 </a>
                             </li>
                             <li className="adjustments-line">
                                 <a href="javascript:void(0)" className="switch-trigger">
-                                    <p>Sidebar Image</p>
-                                    <div className="togglebutton switch-sidebar-image">
-                                        <label>
-                                            <input type="checkbox" checked="" />
-                                        </label>
+                                    <p>Fixed Navbar</p>
+                                    <div className="switch  switch-navbar-fixed"
+                                        data-on-label="ON"
+                                        data-off-label="OFF">
+                                        <input type="checkbox" />
                                     </div>
                                     <div className="clearfix"></div>
                                 </a>
                             </li>
-                            <li className="header-title">Images</li>
+                            <li className="adjustments-line">
+                                <a href="javascript:void(0)" className="switch-trigger">
+                                    <p>Filters</p>
+                                    <div className="pull-right">
+                                        <span className="badge filter" data-color="black"></span>
+                                        <span className="badge filter badge-azure" data-color="azure"></span>
+                                        <span className="badge filter badge-green" data-color="green"></span>
+                                        <span className="badge filter badge-orange active" data-color="orange"></span>
+                                        <span className="badge filter badge-red" data-color="red"></span>
+                                        <span className="badge filter badge-purple" data-color="purple"></span>
+                                    </div>
+                                    <div className="clearfix"></div>
+                                </a>
+                            </li>
+                            <li className="header-title">Sidebar Images</li>
+                            <li>
+                                <a className="img-holder switch-trigger" href="javascript:void(0)">
+                                    <img src="/light-bootstrap-dashboard-pro/assets/img/full-screen-image-1.jpg" />
+                                </a>
+                            </li>
+                            <li>
+                                <a className="img-holder switch-trigger" href="javascript:void(0)">
+                                    <img src="/light-bootstrap-dashboard-pro/assets/img/full-screen-image-2.jpg" />
+                                </a>
+                            </li>
                             <li className="active">
                                 <a className="img-holder switch-trigger" href="javascript:void(0)">
-                                    <img src="../assets/img/sidebar-1.jpg" alt="" />
+                                    <img src="/light-bootstrap-dashboard-pro/assets/img/full-screen-image-3.jpg" />
                                 </a>
                             </li>
                             <li>
                                 <a className="img-holder switch-trigger" href="javascript:void(0)">
-                                    <img src="../assets/img/sidebar-2.jpg" alt="" />
+                                    <img src="/light-bootstrap-dashboard-pro/assets/img/full-screen-image-4.jpg" />
                                 </a>
                             </li>
-                            <li>
-                                <a className="img-holder switch-trigger" href="javascript:void(0)">
-                                    <img src="../assets/img/sidebar-3.jpg" alt="" />
-                                </a>
-                            </li>
-                            <li>
-                                <a className="img-holder switch-trigger" href="javascript:void(0)">
-                                    <img src="../assets/img/sidebar-4.jpg" alt="" />
-                                </a>
-                            </li>
+
                             <li className="button-container">
                                 <div className="">
-                                    <a href="http://www.creative-tim.com/product/material-dashboard-pro" target="_blank" className="btn btn-rose btn-block">Buy Now</a>
+                                    <a href="http://www.creative-tim.com/product/light-bootstrap-dashboard" target="_blank" className="btn btn-info btn-block">Get Free Demo</a>
                                 </div>
                                 <div className="">
-                                    <a href="http://www.creative-tim.com/product/material-dashboard" target="_blank" className="btn btn-info btn-block">Get Free Demo</a>
+                                    <a href="http://www.creative-tim.com/product/light-bootstrap-dashboard-pro" target="_blank" className="btn btn-info btn-block btn-fill">Buy Now!</a>
                                 </div>
                             </li>
-                            <li className="header-title">Thank you for 95 shares!</li>
+
+                            <li className="header-title">Thank you for 452 shares!</li>
+
                             <li className="button-container">
-                                <button id="twitter" className="btn btn-social btn-twitter btn-round"><i className="fa fa-twitter"></i> &middot; 45</button>
-                                <button id="facebook" className="btn btn-social btn-facebook btn-round"><i className="fa fa-facebook-square"> &middot;</i>50</button>
+                                <button id="twitter" className="btn btn-social btn-twitter btn-round"><i className="fa fa-twitter"></i> &middot; 182</button>
+                                <button id="facebook" className="btn btn-social btn-facebook btn-round"><i className="fa fa-facebook-square"> &middot; 270</i></button>
                             </li>
+
                         </ul>
                     </div>
                 </div>*/}
