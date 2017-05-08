@@ -6,7 +6,7 @@ export default class App extends Component {
         return (
             <div>
                 <div className="wrapper">
-                    <div className="sidebar" data-active-color="purple" data-background-color="black" data-image="../assets/img/sidebar-3.jpg">
+                    <div className="sidebar" data-active-color="blue" data-background-color="black" data-image="./assets/img/sidebar-1.jpg">
                         {/*<!--
         Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
         Tip 2: you can also add an image using data-image tag
@@ -25,7 +25,7 @@ export default class App extends Component {
                         <div className="sidebar-wrapper">
                             <div className="user">
                                 <div className="photo">
-                                    <img src="../assets/img/faces/marc.jpg" alt="" />
+                                    <img src="./assets/img/admin.jpg" alt="" />
                                 </div>
                                 <div className="info">
                                     <a data-toggle="collapse" href="#collapseExample" className="collapsed">
@@ -34,15 +34,11 @@ export default class App extends Component {
                                     </a>
                                     <div className="collapse" id="collapseExample">
                                         <ul className="nav">
-                                            <li>
-                                                <a href="#">My Profile</a>
-                                            </li>
+
                                             <li>
                                                 <a href="#">Edit Profile</a>
                                             </li>
-                                            <li>
-                                                <a href="#">Settings</a>
-                                            </li>
+
                                         </ul>
                                     </div>
                                 </div>
@@ -57,22 +53,22 @@ export default class App extends Component {
                                 <li>
                                     <a data-toggle="collapse" href="#pagesExamples">
                                         <i className="material-icons">image</i>
-                                        <p>Pages
+                                        <p>Plants
                                         <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="pagesExamples">
                                         <ul className="nav">
                                             <li>
-                                                <a href="./pages/pricing.html">Pricing</a>
+                                                <a href="./pages/pricing.html">Plant 1</a>
                                             </li>
                                             <li>
-                                                <a href="./pages/timeline.html">Timeline</a>
+                                                <a href="./pages/timeline.html">Plant 2</a>
                                             </li>
                                             <li>
-                                                <a href="./pages/login.html">Login Page</a>
+                                                <a href="./pages/login.html">Plant 3</a>
                                             </li>
-                                            <li>
+                                            {/*<li>
                                                 <a href="./pages/register.html">Register Page</a>
                                             </li>
                                             <li>
@@ -80,88 +76,11 @@ export default class App extends Component {
                                             </li>
                                             <li>
                                                 <a href="./pages/user.html">User Profile</a>
-                                            </li>
+                                            </li>*/}
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
-                                    <a data-toggle="collapse" href="#componentsExamples">
-                                        <i className="material-icons">apps</i>
-                                        <p>Components
-                                        <b className="caret"></b>
-                                        </p>
-                                    </a>
-                                    <div className="collapse" id="componentsExamples">
-                                        <ul className="nav">
-                                            <li>
-                                                <a href="./components/buttons.html">Buttons</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/grid.html">Grid System</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/panels.html">Panels</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/sweet-alert.html">Sweet Alert</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/notifications.html">Notifications</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/icons.html">Icons</a>
-                                            </li>
-                                            <li>
-                                                <a href="./components/typography.html">Typography</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a data-toggle="collapse" href="#formsExamples">
-                                        <i className="material-icons">content_paste</i>
-                                        <p>Forms
-                                        <b className="caret"></b>
-                                        </p>
-                                    </a>
-                                    <div className="collapse" id="formsExamples">
-                                        <ul className="nav">
-                                            <li>
-                                                <a href="./forms/regular.html">Regular Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="./forms/extended.html">Extended Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="./forms/validation.html">Validation Forms</a>
-                                            </li>
-                                            <li>
-                                                <a href="./forms/wizard.html">Wizard</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a data-toggle="collapse" href="#tablesExamples">
-                                        <i className="material-icons">grid_on</i>
-                                        <p>Tables
-                                        <b className="caret"></b>
-                                        </p>
-                                    </a>
-                                    <div className="collapse" id="tablesExamples">
-                                        <ul className="nav">
-                                            <li>
-                                                <a href="./tables/regular.html">Regular Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="./tables/extended.html">Extended Tables</a>
-                                            </li>
-                                            <li>
-                                                <a href="./tables/datatables.net.html">DataTables.net</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
+
                                 <li>
                                     <a data-toggle="collapse" href="#mapsExamples">
                                         <i className="material-icons">place</i>
@@ -180,25 +99,14 @@ export default class App extends Component {
                                             <li>
                                                 <a href="./maps/vector.html">Vector Map</a>
                                             </li>
+
                                         </ul>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="">
-                                        <i className="material-icons">widgets</i>
-                                        <p>Widgets</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i className="material-icons">timeline</i>
-                                        <p>Charts</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i className="material-icons">date_range</i>
-                                        <p>Calendar</p>
+                                    <a href="./dashboard.html">
+                                        <i className="material-icons">settings</i>
+                                        <p>Settings</p>
                                     </a>
                                 </li>
                             </ul>
@@ -265,7 +173,7 @@ export default class App extends Component {
                                         </li>
                                         <li className="separator hidden-lg hidden-md"></li>
                                     </ul>
-                                    <form className="navbar-form navbar-right" role="search">
+                                    {/*<form className="navbar-form navbar-right" role="search">
                                         <div className="form-group form-search is-empty">
                                             <input type="text" className="form-control" placeholder="Search" />
                                             <span className="material-input"></span>
@@ -274,7 +182,7 @@ export default class App extends Component {
                                             <i className="material-icons">search</i>
                                             <div className="ripple-container"></div>
                                         </button>
-                                    </form>
+                                    </form>*/}
                                 </div>
                             </div>
                         </nav>
@@ -282,74 +190,60 @@ export default class App extends Component {
                         <div className="content">
                             <div className="container-fluid">
                                 <div className="row">
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="orange">
-                                                <i className="material-icons">weekend</i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Bookings</p>
-                                                <h3 className="card-title">184</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons text-danger">warning</i>
-                                                    <a href="#pablo">Get More Space...</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="rose">
-                                                <i className="material-icons">equalizer</i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Website Visits</p>
-                                                <h3 className="card-title">75.521</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">local_offer</i> Tracked from Google Analytics
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
-                                        <div className="card card-stats">
-                                            <div className="card-header" data-background-color="green">
-                                                <i className="material-icons">store</i>
-                                            </div>
-                                            <div className="card-content">
-                                                <p className="category">Revenue</p>
-                                                <h3 className="card-title">$34,245</h3>
-                                            </div>
-                                            <div className="card-footer">
-                                                <div className="stats">
-                                                    <i className="material-icons">date_range</i> Last 24 Hours
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-6">
+                                    <div className="col-lg-6 col-md-6 col-sm-6">
                                         <div className="card card-stats">
                                             <div className="card-header" data-background-color="blue">
-                                                <i className="fa fa-twitter"></i>
+                                                <i className="material-icons">account_balance</i>
                                             </div>
                                             <div className="card-content">
-                                                <p className="category">Followers</p>
-                                                <h3 className="card-title">+245</h3>
+                                                <p className="category">Plant 1</p>
+                                                <h3 className="card-title">$30000</h3>
                                             </div>
-                                            <div className="card-footer">
+                                            <div className="card-footer anchorDiv">
                                                 <div className="stats">
-                                                    <i className="material-icons">update</i> Just Updated
-                                                 </div>
+                                                    <i className="material-icons">info</i>
+                                                    <a href="#pablo" style={{ textDecoration: 'none', color: '#999' }}>More info....</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-md-6 col-sm-6">
+                                        <div className="card card-stats">
+                                            <div className="card-header" data-background-color="blue">
+                                                <i className="material-icons">account_balance</i>
+                                            </div>
+                                            <div className="card-content">
+                                                <p className="category">Plant 2</p>
+                                                <h3 className="card-title">$75521</h3>
+                                            </div>
+                                            <div className="card-footer anchorDiv">
+                                                <div className="stats">
+                                                    <i className="material-icons">info</i>
+                                                    <a href="#pablo" style={{ textDecoration: 'none', color: '#999' }}>More info....</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-md-6 col-sm-6">
+                                        <div className="card card-stats">
+                                            <div className="card-header" data-background-color="blue">
+                                                <i className="material-icons">account_balance</i>
+                                            </div>
+                                            <div className="card-content">
+                                                <p className="category">Plant 3</p>
+                                                <h3 className="card-title">$34,245</h3>
+                                            </div>
+                                            <div className="card-footer anchorDiv">
+                                                <div className="stats">
+                                                    <i className="material-icons">info</i>
+                                                    <a href="#pablo" style={{ textDecoration: 'none', color: '#999' }}>More info....</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="row">
+                                {/*<div className="row">
                                     <div className="col-md-4">
                                         <div className="card card-chart">
                                             <div className="card-header" data-background-color="rose" data-header-animation="true">
@@ -432,9 +326,9 @@ export default class App extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>*/}
 
-                                <div className="row">
+                                {/*<div className="row">
                                     <div className="col-md-12">
                                         <div className="card">
                                             <div className="card-header card-header-icon" data-background-color="green">
@@ -450,7 +344,7 @@ export default class App extends Component {
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/US.png" alt=""/>
+                                                                                <img src="../assets/img/flags/US.png" alt="" />
                                                                             </div>
                                                                         </td>
                                                                         <td>USA</td>
@@ -464,7 +358,7 @@ export default class App extends Component {
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/DE.png" alt=""/>
+                                                                                <img src="../assets/img/flags/DE.png" alt="" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Germany</td>
@@ -478,7 +372,7 @@ export default class App extends Component {
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/AU.png" alt=""/>
+                                                                                <img src="../assets/img/flags/AU.png" alt="" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Australia</td>
@@ -492,7 +386,7 @@ export default class App extends Component {
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/GB.png" alt=""/>
+                                                                                <img src="../assets/img/flags/GB.png" alt="" />
                                                                             </div>
                                                                         </td>
                                                                         <td>United Kingdom</td>
@@ -506,7 +400,7 @@ export default class App extends Component {
                                                                     <tr>
                                                                         <td>
                                                                             <div className="flag">
-                                                                                <img src="../assets/img/flags/RO.png" alt=""/>
+                                                                                <img src="../assets/img/flags/RO.png" alt="" />
                                                                             </div>
                                                                         </td>
                                                                         <td>Romania</td>
@@ -542,9 +436,9 @@ export default class App extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                {/*<h3>Manage Listings</h3>
+                                </div>*/}
+
+                                <h3>Manage Plants</h3>
                                 <br />
                                 <div className="row">
                                     <div className="col-md-4">
@@ -664,7 +558,7 @@ export default class App extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                </div>*/}
+                                </div>
                             </div>
                         </div>
                         <footer className="footer">
@@ -672,7 +566,7 @@ export default class App extends Component {
                                 <p className="copyright pull-right">
                                     &copy;
                                     2017
-                                    <a href="">Saylani Software House</a>, made with love for a better web
+                                    <a href="">Saylani Software House</a>, work with passion for a better Experience
                                 </p>
                             </div>
                         </footer>
