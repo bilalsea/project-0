@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import './AdminPanel.css';
 
 export default class App extends Component {
@@ -15,31 +16,29 @@ export default class App extends Component {
         -->*/}
 
                         <div className="logo">
-                            <a href="http://www.creative-tim.com" className="logo-text">
-                                Creative Tim
-            </a>
+                            <a href="" className="logo-text">
+                                Admin panel
+                            </a>
                         </div>
                         <div className="logo logo-mini">
                             <a href="http://www.creative-tim.com" className="logo-text">
                                 Ct
-			</a>
+			                </a>
                         </div>
 
                         <div className="sidebar-wrapper">
                             <div className="user">
                                 <div className="photo">
-                                    <img src="../assets/img/default-avatar.png" />
+                                    <img src="../assets/img/admin.jpg" />
                                 </div>
                                 <div className="info">
                                     <a data-toggle="collapse" href="#collapseExample" className="collapsed">
-                                        Tania Andrew
-                        <b className="caret"></b>
+                                        Admin
+                                    <b className="caret"></b>
                                     </a>
                                     <div className="collapse" id="collapseExample">
                                         <ul className="nav">
-                                            <li><a href="#">My Profile</a></li>
                                             <li><a href="#">Edit Profile</a></li>
-                                            <li><a href="#">Settings</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -53,10 +52,39 @@ export default class App extends Component {
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="calendar.html">
+                                        <i className="fa fa-calendar"></i>
+                                        <p>Calendar</p>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a data-toggle="collapse" href="#mapsExamples">
+                                        <i className="fa fa-map-marker"></i>
+                                        <p>Maps
+                                        <b className="caret"></b>
+                                        </p>
+                                    </a>
+                                    <div className="collapse" id="mapsExamples">
+                                        <ul className="nav">
+                                            <li><a href="maps/google.html">Google Maps</a></li>
+                                            <li><a href="maps/vector.html">Vector Maps</a></li>
+                                            <li><a href="maps/fullscreen.html">Full Screen Map</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                 <li>
+                                    <Link to="/settings">
+                                        <i className="fa fa-cog"></i>
+                                        <p>Settings</p>
+                                    </Link>
+                                </li>
+
+                                {/*<li>
                                     <a data-toggle="collapse" href="#componentsExamples">
                                         <i className="fa fa-plugin"></i>
                                         <p>Components
-                           <b className="caret"></b>
+                                        <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="componentsExamples">
@@ -104,43 +132,22 @@ export default class App extends Component {
                                             <li><a href="tables/datatables.net.html">DataTables.net</a></li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li>*/}
 
-                                <li>
-                                    <a data-toggle="collapse" href="#mapsExamples">
-                                        <i className="fa fa-map-marker"></i>
-                                        <p>Maps
-                           <b className="caret"></b>
-                                        </p>
-                                    </a>
-                                    <div className="collapse" id="mapsExamples">
-                                        <ul className="nav">
-                                            <li><a href="maps/google.html">Google Maps</a></li>
-                                            <li><a href="maps/vector.html">Vector Maps</a></li>
-                                            <li><a href="maps/fullscreen.html">Full Screen Map</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li>
+                                {/*<li>
                                     <a href="charts.html">
                                         <i className="fa fa-graph1"></i>
                                         <p>Charts</p>
                                     </a>
-                                </li>
+                                </li>*/}
 
-                                <li>
-                                    <a href="calendar.html">
-                                        <i className="fa fa-calendar"></i>
-                                        <p>Calendar</p>
-                                    </a>
-                                </li>
+                                
 
-                                <li>
+                                {/*<li>
                                     <a data-toggle="collapse" href="#pagesExamples">
                                         <i className="pe-7s-gift"></i>
                                         <p>Pages
-                           <b className="caret"></b>
+                                        <b className="caret"></b>
                                         </p>
                                     </a>
                                     <div className="collapse" id="pagesExamples">
@@ -152,7 +159,7 @@ export default class App extends Component {
                                             <li><a href="#">More coming soon...</a></li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li>*/}
                             </ul>
                         </div>
                     </div>
@@ -275,119 +282,167 @@ export default class App extends Component {
                         <div className="content">
                             <div className="container-fluid">
 
-                                <div className="row">
-                                    <div className="col-md-12">
-                                        <div className="card ">
-                                            <div className="header">
-                                                <h4 className="title">Global Sales by Top Locations</h4>
-                                                <p className="category">All products that were shipped</p>
-                                            </div>
-                                            <div className="content">
-                                                <div className="row">
-                                                    <div className="col-md-5">
-                                                        <div className="table-responsive">
-                                                            <table className="table">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div className="flag">
-                                                                                <img src="../assets/img/flags/US.png" />
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>USA</td>
-                                                                        <td className="text-right">
-                                                                            2.920
-                                                        </td>
-                                                                        <td className="text-right">
-                                                                            53.23%
-                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div className="flag">
-                                                                                <img src="../assets/img/flags/DE.png" />
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>Germany</td>
-                                                                        <td className="text-right">
-                                                                            1.300
-                                                        </td>
-                                                                        <td className="text-right">
-                                                                            20.43%
-                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div className="flag">
-                                                                                <img src="../assets/img/flags/AU.png" />
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>Australia</td>
-                                                                        <td className="text-right">
-                                                                            760
-                                                        </td>
-                                                                        <td className="text-right">
-                                                                            10.35%
-                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div className="flag">
-                                                                                <img src="../assets/img/flags/GB.png" />
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>United Kingdom</td>
-                                                                        <td className="text-right">
-                                                                            690
-                                                        </td>
-                                                                        <td className="text-right">
-                                                                            7.87%
-                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div className="flag">
-                                                                                <img src="../assets/img/flags/RO.png" />
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>Romania</td>
-                                                                        <td className="text-right">
-                                                                            600
-                                                        </td>
-                                                                        <td className="text-right">
-                                                                            5.94%
-                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <div className="flag">
-                                                                                <img src="../assets/img/flags/BR.png" />
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>Brasil</td>
-                                                                        <td className="text-right">
-                                                                            550
-                                                        </td>
-                                                                        <td className="text-right">
-                                                                            4.34%
-                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </div>
-                                                    <div className="col-md-6 col-md-offset-1">
-                                                        <div id="worldMap" style={{ height: 300 }}></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               <div className="row">
+                    <div className="col-md-12">
+                        <div className="card col-md-12">
+                            <div className="header">
+                                <h4 className="title">Total sales summary</h4>
+                                <p className="category"></p>
+                            </div>
+                            <div className="content table-responsive table-full-width scrollTable">
+                                <table className="table table-hover table-striped ">
+                                    <thead>
+                                        <th>Rciept No</th>
+                                    	<th>Family ID</th>
+                                    	<th>Block</th>
+                                    	<th>No of family member</th>
+                                    	<th>Do you own a tank</th>
+                                    	<th>Taransport</th>
+                                    	<th>Time to plant</th>
+                                    	<th>Internal/External container</th>
+                                    	<th>Gender</th>
+                                    	<th>Date</th>
+                                    	<th>Time sold</th>
+                                    	<th>No of cans sold</th>
+                                    	<th>Can Capacity</th>
+                                    	<th>Total liters</th>
+                                    	<th>Place of sale</th>
+                                    	<th>Shopkeeper Name</th>
+                                    	<th>Amount paid</th>
+                                    	<th>Deposit/can</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                        	<td>1</td>
+                                        	<td>Dakota Rice</td>
+                                        	<td>$36,738</td>
+                                        	<td>Niger</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        	<td>Oud-Turnhout</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>2</td>
+                                        	<td>Minerva Hooper</td>
+                                        	<td>$23,789</td>
+                                        	<td>Curaçao</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        	<td>Sinaai-Waas</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>3</td>
+                                        	<td>Sage Rodriguez</td>
+                                        	<td>$56,142</td>
+                                        	<td>Netherlands</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        	<td>Baileux</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>4</td>
+                                        	<td>Philip Chaney</td>
+                                        	<td>$38,735</td>
+                                        	<td>Korea, South</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        	<td>Overland Park</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>5</td>
+                                        	<td>Doris Greene</td>
+                                        	<td>$63,542</td>
+                                        	<td>Malawi</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        	<td>Feldkirchen in Kärnten</td>
+                                        </tr>
+                                        <tr>
+                                        	<td>6</td>
+                                        	<td>Mason Porter</td>
+                                        	<td>$78,615</td>
+                                        	<td>Chile</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        	<td>Gloucester</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
-                                <div className="row">
+                                {/*<div className="row">
                                     <div className="col-md-4">
                                         <div className="card">
                                             <div className="header">
@@ -581,7 +636,7 @@ export default class App extends Component {
 
                                         </div>
                                     </div>
-                                </div>
+                                </div>*/}
 
 
 

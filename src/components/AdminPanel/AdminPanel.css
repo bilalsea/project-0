@@ -1,0 +1,8 @@
+.scrollTable {
+    overflow: auto;
+    padding: 10px;
+}
+th {
+    padding: 5px;
+    text-align: center
+}
