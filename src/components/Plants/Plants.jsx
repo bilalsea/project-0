@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
-import './Settings.css';
+import React,{Component} from "react";
+import "./Plants.css";
 
-class Settings extends Component{
+class Plants extends Component{
     render(){
-        return (
-            <div className="Settings">
+        return(
+            <div className="Plants">
                 <div className="content">
                     <div className="container-fluid">
                         <div className="row">
-                            <h1>Settings Component</h1>                        
+                            <h1>Plants Component</h1>                        
                         </div>
                     </div>
                 </div>
@@ -16,4 +16,5 @@ class Settings extends Component{
         )
     }
 }
-export default Settings
+
+export default Plants

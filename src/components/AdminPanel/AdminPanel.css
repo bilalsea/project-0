@@ -1,8 +1,10 @@
-.scrollTable {
-    overflow: auto;
-    padding: 10px;
+.AdminPanel{
+    height: 100%;
+    position: relative;
 }
-th {
-    padding: 5px;
-    text-align: center
+.anchorDiv {
+    text-align: center;
+}
+.footerDiv{
+    margin-bottom: 0px;
 }

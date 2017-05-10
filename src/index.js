@@ -6,7 +6,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import store from './store';
-import {Login, AdminPanel, Settings } from './components';
+import {Login, AdminPanel, AdminDashboard, Plants, Settings } from './components';
+import './index.css';
 
 injectTapEventPlugin();
 
@@ -14,9 +15,12 @@ ReactDOM.render(
     <Provider store={store}>
         <MuiThemeProvider>
             <Router history={browserHistory}>
-                <Route path="/" component={AdminPanel}>
-                    <IndexRoute component={Login}/>
-                    <Route path="/settings" component={Settings}/>                    
+               <Route path="/" component={Login}/>
+                <Route path="/adminpanel" component={AdminPanel}>
+                    <IndexRoute component={AdminDashboard}/>
+                    <Route path="/plants" component={Plants}/>
+                    <Route path="/admindashboard" component={AdminDashboard}/>
+                    <Route path="/settings" component={Settings}/>
                 </Route>
             </Router>
         </MuiThemeProvider>
