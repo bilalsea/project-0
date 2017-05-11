@@ -9,7 +9,7 @@ export default class AuthMiddleware{
                     browserHistory.push('/adminpanel');
                 }
                 else if(id === "678"){
-                    browserHistory.push('/plants');
+                    browserHistory.push('/managerpanel');
                 }
                 else {
                     alert("wrong id ");

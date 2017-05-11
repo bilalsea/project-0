@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
+import './Settings.css';
 
 class Settings extends Component{
     render(){
         return (
-            <div>Settings</div>
+                <div className="content">
+                    <div className="container-fluid">
+                        <div className="row">
+                            <h1>Settings Component</h1>                        
+                        </div>
+                    </div>
+                </div>
         )
     }
 }
-
 export default Settings
