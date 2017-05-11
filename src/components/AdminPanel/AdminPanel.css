@@ -1,2 +1,15 @@
+<<<<<<< HEAD
 
 
+=======
+.AdminPanel{
+    height: 100%;
+    position: relative;
+}
+.anchorDiv {
+    text-align: center;
+}
+.footerDiv{
+    margin-bottom: 0px;
+}
+>>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3

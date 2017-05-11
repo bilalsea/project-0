@@ -13,9 +13,13 @@ export {
     AdminPanel, 
     AdminDashboard, 
     Plants,
+<<<<<<< HEAD
     Settings,
     ManagerPanel,
     Customers,
     Vendors,
     Quality
+=======
+    Settings 
+>>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
 } ;
