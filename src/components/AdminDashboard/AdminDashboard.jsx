@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router';
 import "./AdminDashboard.css";
 
 class AdminDashboard extends Component {
@@ -65,9 +66,9 @@ class AdminDashboard extends Component {
                             <div className="col-md-4">
                                 <div className="card card-product">
                                     <div className="card-image" data-header-animation="true">
-                                        <a href="#pablo">
+                                        <Link to="/plants">
                                             <img className="img" src="../assets/img/card-2.jpeg" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="card-content">
                                         <div className="card-actions">
@@ -85,7 +86,7 @@ class AdminDashboard extends Component {
                                             </button>
                                         </div>
                                         <h4 className="card-title">
-                                            <a href="#pablo">Plant 1</a>
+                                            <Link to="/plants">Plant 1</Link>
                                         </h4>
                                         <div className="card-description">
                                             The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.
@@ -101,9 +102,9 @@ class AdminDashboard extends Component {
                             <div className="col-md-4">
                                 <div className="card card-product">
                                     <div className="card-image" data-header-animation="true">
-                                        <a href="#pablo">
+                                        <Link to="/plants">
                                             <img className="img" src="../assets/img/card-3.jpeg" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="card-content">
                                         <div className="card-actions">
@@ -121,7 +122,7 @@ class AdminDashboard extends Component {
                                             </button>
                                         </div>
                                         <h4 className="card-title">
-                                            <a href="#pablo">Plant 2</a>
+                                            <Link to="/plants">Plant 2</Link>
                                         </h4>
                                         <div className="card-description">
                                             The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.
@@ -137,9 +138,9 @@ class AdminDashboard extends Component {
                             <div className="col-md-4">
                                 <div className="card card-product">
                                     <div className="card-image" data-header-animation="true">
-                                        <a href="#pablo">
+                                        <Link to="/plants">
                                             <img className="img" src="../assets/img/card-1.jpeg" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="card-content">
                                         <div className="card-actions">
@@ -157,7 +158,7 @@ class AdminDashboard extends Component {
                                             </button>
                                         </div>
                                         <h4 className="card-title">
-                                            <a href="#pablo">Plant 3</a>
+                                            <Link to="/plants">Plant 3</Link>
                                         </h4>
                                         <div className="card-description">
                                             The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.
