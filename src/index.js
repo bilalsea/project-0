@@ -6,7 +6,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import store from './store';
-<<<<<<< HEAD
 import './index.css';
 import {
     Login, 
@@ -20,10 +19,6 @@ import {
     Quality 
 } from './components';
 
-=======
-import {Login, AdminPanel, AdminDashboard, Plants, Settings } from './components';
-import './index.css';
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
 
 injectTapEventPlugin();
 

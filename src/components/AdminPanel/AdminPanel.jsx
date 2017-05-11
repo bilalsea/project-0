@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-<<<<<<< HEAD
 // import AdminDashboard from '../AdminDashboard/AdminDashboard';
 // import Plants from '../Plants/Plants';
 // import Settings from '../Settings/Settings';
-=======
-import AdminDashboard from '../AdminDashboard/AdminDashboard';
-import Plants from '../Plants/Plants';
-import Settings from '../Settings/Settings';
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
 import './AdminPanel.css';
 
 export default class App extends Component {
     render() {
         return (
-<<<<<<< HEAD
                 <div className="wrapper">
                     <div className="sidebar " data-active-color="blue" data-background-color="black" data-image="./assets/img/sidebar-1.jpg">
-=======
-            <div className="AdminPanel">
-                <div className="wrapper">
-                    <div className="sidebar" data-active-color="blue" data-background-color="black" data-image="./assets/img/sidebar-1.jpg">
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
                         {/*<!--
         Tip 1: You can change the color of active element of the sidebar using: data-active-color="purple | blue | green | orange | red | rose"
         Tip 2: you can also add an image using data-image tag
@@ -129,11 +117,7 @@ export default class App extends Component {
                         </div>
                     </div>
                     <div className="main-panel">
-<<<<<<< HEAD
                         <nav className="navbar navbar-transparent navbar-absolute">
-=======
-                        <nav className="navbar navbar-transparent">
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
                             <div className="container-fluid">
                                 <div className="navbar-minimize">
                                     <button id="minimizeSidebar" className="btn btn-round btn-white btn-fill btn-just-icon">
@@ -206,13 +190,8 @@ export default class App extends Component {
                                 </div>
                             </div>
                         </nav>
-<<<<<<< HEAD
                             {this.props.children}  
                             <footer className="footer">
-=======
-                        {this.props.children}
-                        <footer className="footer footerDiv">
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
                             <div className="container-fluid">
                                 <p className="copyright pull-right">
                                     &copy;
@@ -220,19 +199,10 @@ export default class App extends Component {
                                     <a href="">Saylani Software House</a>, work with passion for a better Experience
                                 </p>
                             </div>
-<<<<<<< HEAD
                         </footer>   
                     </div>
                 </div>
          
-=======
-                        </footer>
-                    </div>
-
-                </div>
-
-            </div>
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
         )
     }
 }

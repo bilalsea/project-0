@@ -33,11 +33,7 @@ class Login extends Component {
         return (
             <div className="loginDiv">
                 <div className="wrapper wrapper-full-page">
-<<<<<<< HEAD
                     <div className="full-page login-page" data-image="../assets/img/sidebar-3.jpg">
-=======
-                    <div className="full-page login-page" data-image="../assets/img/sidebar-2.jpg">
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
                         {/*<!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->*/}
                         <div className="content">
                             <div className="container">

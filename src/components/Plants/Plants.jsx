@@ -1,14 +1,10 @@
 import React,{Component} from "react";
-<<<<<<< HEAD
 import {Link} from 'react-router';
-=======
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
 import "./Plants.css";
 
 class Plants extends Component{
     render(){
         return(
-<<<<<<< HEAD
                 <div className="content">
                     <div className="container-fluid">
                         <div className="row">
@@ -177,17 +173,6 @@ class Plants extends Component{
                         </div>
                     </div>
                 </div>
-=======
-            <div className="Plants">
-                <div className="content">
-                    <div className="container-fluid">
-                        <div className="row">
-                            <h1>Plants Component</h1>                        
-                        </div>
-                    </div>
-                </div>
-            </div>
->>>>>>> cf6fe05e622f2617991dd4e0c94f6f4d0ddfaab3
         )
     }
 }
