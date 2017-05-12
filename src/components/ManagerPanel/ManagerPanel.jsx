@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
+
 import './ManagerPanel.css';
 
 class ManagerPanel extends Component {

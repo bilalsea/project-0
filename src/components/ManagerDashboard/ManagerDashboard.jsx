@@ -1,8 +1,8 @@
 import React,{Component} from "react";
 import {Link} from 'react-router';
-import "./Plants.css";
+import "./ManagerDashboard.css";
 
-class Plants extends Component{
+class ManagerDashboard extends Component{
     render(){
         return(
                 <div className="content">
@@ -177,4 +177,4 @@ class Plants extends Component{
     }
 }
 
-export default Plants
+export default ManagerDashboard

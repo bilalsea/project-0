@@ -49,7 +49,7 @@ export default class App extends Component {
                             </div>
                             <ul className="nav">
                                 <li className="active">
-                                    <Link to="/admindashboard">
+                                    <Link to="/adminpanel">
                                         <i className="material-icons">dashboard</i>
                                         <p>Dashboard</p>
                                     </Link>
@@ -64,13 +64,13 @@ export default class App extends Component {
                                     <div className="collapse" id="pagesExamples">
                                         <ul className="nav">
                                             <li>
-                                                <Link to="/plants">Plant 1</Link>
+                                                <Link to="/managerdashboard">Plant 1</Link>
                                             </li>
                                             <li>
-                                                <Link to="/plants">Plant 2</Link>
+                                                <Link to="/managerdashboard">Plant 2</Link>
                                             </li>
                                             <li>
-                                                <Link to="/plants">Plant 3</Link>
+                                                <Link to="/managerdashboard">Plant 3</Link>
                                             </li>
                                             {/*<li>
                                                 <a href="./pages/register.html">Register Page</a>

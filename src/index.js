@@ -10,10 +10,10 @@ import './index.css';
 import {
     Login, 
     AdminPanel, 
-    AdminDashboard, 
-    Plants, 
+    AdminDashboard,  
     Settings,
     ManagerPanel,
+    ManagerDahsboard,
     Customers,
     Vendors,
     Quality 
@@ -29,16 +29,18 @@ ReactDOM.render(
                <Route path="/" component={Login}/>
                 <Route path="/adminpanel" component={AdminPanel}>
                     <IndexRoute component={AdminDashboard}/>
-                    <Route path="/plants" component={Plants}/>
-                    <Route path="/admindashboard" component={AdminDashboard}/>
-                    <Route path="/settings" component={Settings}/>
-                </Route>
-                <Route path="/managerpanel" component={ManagerPanel}>
-                    <IndexRoute component={Plants}/>
+                    <Route path="/managerdashboard" component={ManagerDahsboard}/>
                     <Route path="/customers" component={Customers}/>
                     <Route path="/vendors" component={Vendors}/>
                     <Route path="/quality" component={Quality}/>
-                </Route>           
+                    <Route path="/settings" component={Settings}/>
+                </Route>
+                <Route path="/managerpanel" component={ManagerPanel}>
+                    <IndexRoute component={ManagerDahsboard}/>
+                    <Route path="/customers" component={Customers}/>
+                    <Route path="/vendors" component={Vendors}/>
+                    <Route path="/quality" component={Quality}/>
+                </Route>    
             </Router>
         </MuiThemeProvider>
     </Provider>,
